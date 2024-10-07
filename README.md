@@ -1,23 +1,25 @@
 # JavaScript Type Transpiler
 
+🚧 WIP
+
 ## How to Use
 
 ### CLI
 
 ```sh
 # transform type annotation to jsdoc
-npx jst2doc --write index.js
+npx jstt --write index.js
 
 # transform type annotation of single file to jsdoc and format using prettier
-npx jst2doc index.js && npx prettier --stdin-filepath index.js
+npx jstt index.js && npx prettier --stdin-filepath index.js
 
 # transform type annotation of multiple files to jsdoc and format using prettier
 # index.js, utils.js in src directory
 # 1st approach
-npx jst2doc src && npx prettier src
+npx jstt src && npx prettier src
 
 # 2nd approach to prevent files from being written multiple times
-npx jst2doc src --on-transpiled "npx prettier --stdin-filepath {filepath}"
+npx jstt src --on-transpiled "npx prettier --stdin-filepath {filepath}"
 ```
 
 ### VS Code Extension
