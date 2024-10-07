@@ -1,0 +1,11 @@
+{
+  "[javascript]": {
+    "editor.defaultFormatter": "oneofthezombies.type-anno-vscode",
+    "multiFormatter.formatterList": [
+      "oneofthezombies.type-anno-vscode",
+      "esbenp.prettier-vscode"
+    ],
+    "editor.formatOnSave": true
+  },
+  "type-anno.arguments": []
+}

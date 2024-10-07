@@ -4,6 +4,7 @@
     "ms-vscode.extension-test-runner",
     "streetsidesoftware.code-spell-checker",
     "esbenp.prettier-vscode",
-    "editorconfig.editorconfig"
+    "editorconfig.editorconfig",
+    "jota0222.multi-formatter"
   ]
 }
