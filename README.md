@@ -1,66 +1,65 @@
-# JavaScript Type Transpiler
+# js-type-transpiler README
 
-🚧 WIP
+This is the README for your extension "js-type-transpiler". After writing up a brief description, we recommend including the following sections.
 
-## How to Use
+## Features
 
-### CLI
+Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
-```sh
-# transform type annotation to jsdoc
-npx jstt --write index.js
+For example if there is an image subfolder under your extension project workspace:
 
-# transform type annotation of single file to jsdoc and format using prettier
-npx jstt index.js && npx prettier --stdin-filepath index.js
+\!\[feature X\]\(images/feature-x.png\)
 
-# transform type annotation of multiple files to jsdoc and format using prettier
-# index.js, utils.js in src directory
-# 1st approach
-npx jstt src && npx prettier src
+> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
-# 2nd approach to prevent files from being written multiple times
-npx jstt src --on-transpiled "npx prettier --stdin-filepath {filepath}"
-```
+## Requirements
 
-### VS Code Extension
+If you have any requirements or dependencies, add a section describing those and how to install and configure them.
 
-```json
-{
-  "[javascript]": {
-    "editor.defaultFormatter": "oneofthezombies.format-pipe",
-    "editor.formatOnSave": true
-  },
-  "oneofthezombies.js-type-transpiler": {
-    "args": [
-      // ignored when --pipe argument is exists
-      "--write",
+## Extension Settings
 
-      // using prettier formatter
-      "--pipe",
-      "npx prettier --stdin-filepath {filepath} --write",
+Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
 
-      // using eslint formatter
-      "--pipe",
-      "npx eslint --stdin --stdin-filename {filepath} --fix",
+For example:
 
-      // using prettier and eslint formatter
-      "--pipe",
-      "npx prettier --stdin-filepath {filepath}",
-      "--pipe",
-      "npx eslint --stdin --stdin-filename {filepath} --fix"
-    ]
-  }
-}
-```
+This extension contributes the following settings:
 
-### API
+* `myExtension.enable`: Enable/disable this extension.
+* `myExtension.thing`: Set to `blah` to do something.
 
-TODO
+## Known Issues
 
-#### Polyfill
+Calling out known issues can help limit users opening duplicate issues against your extension.
 
-TODO
+## Release Notes
 
-## Reference
+Users appreciate release notes as you update your extension.
 
-<https://github.com/tc39/proposal-type-annotations>
+### 1.0.0
+
+Initial release of ...
+
+### 1.0.1
+
+Fixed issue #.
+
+### 1.1.0
+
+Added features X, Y, and Z.
+
+---
+
+## Working with Markdown
+
+You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+
+* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
+* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
+* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
+
+## For more information
+
+* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
+* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+
+**Enjoy!**
