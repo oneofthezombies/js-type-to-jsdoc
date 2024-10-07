@@ -64,7 +64,3 @@ TODO
 ## Reference
 
 <https://github.com/tc39/proposal-type-annotations>
-
-```
-
-```
