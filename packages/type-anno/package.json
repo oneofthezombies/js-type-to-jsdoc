@@ -1,0 +1,9 @@
+{
+  "name": "@oneofthezombies/type-anno",
+  "version": "0.0.1",
+  "main": "./index.js",
+  "bin": {
+    "type-anno": "./bin/type-anno.js"
+  },
+  "type": "module"
+}
